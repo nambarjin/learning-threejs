@@ -13,7 +13,7 @@ const gui = new dat.GUI({ closed: false, width: 400 });
 const parameters = {
   color: 0xff0000,
   spin: () => {
-    gsap.to(mesh.rotation, { duration: 2, y: mesh.rotation.y + 10});
+    gsap.to(mesh.rotation, { duration: 2, y: mesh.rotation.y + Math.PI / 2 });
   },
 };
 
@@ -98,7 +98,6 @@ const clock = new THREE.Clock();
 
 const tick = () => {
   const elapsedTime = clock.getElapsedTime();
-
   // Update controls
   controls.update();
 
